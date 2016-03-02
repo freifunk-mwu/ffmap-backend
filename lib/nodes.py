@@ -84,8 +84,6 @@ def mark_uplink(node, stats):
     except KeyError:
         pass
 
-    node['flags']['uplink'] = False
-
 
 def import_nodeinfo(nodes, nodeinfos, now, assume_online=False):
     for nodeinfo in filter(lambda d: 'node_id' in d, nodeinfos):
