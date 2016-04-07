@@ -21,7 +21,7 @@ fi
 cd "$(dirname "$0")"/
 
 # run map backend
-/usr/bin/python3 $WORKDIR/backend.py --with-rrd --with-img --rrd-path $CMNTYRRD --prune 45 -m mzBAT:/var/run/alfred-mz.sock --vpn 02:00:0a:25:00:17 02:00:0a:25:00:07 02:00:0a:25:00:d0 02:00:0a:25:00:e7 02:00:0a:25:00:2a -d $WORKDIR/$CMNTYDATA/
+/usr/bin/python3 $WORKDIR/backend.py --with-rrd --rrd-path $CMNTYRRD --prune 45 -m mzBAT:/var/run/alfred-mz.sock --vpn 02:00:0a:25:00:17 02:00:0a:25:00:07 02:00:0a:25:00:d0 02:00:0a:25:00:e7 02:00:0a:25:00:2a -d $WORKDIR/$CMNTYDATA/
 
 # remove contact info
 /usr/bin/jq '.nodes = (.nodes | map(del(.nodeinfo.owner)))' < $WORKDIR/$CMNTYDATA/nodes.json > $WORKDIR/$CMNTYDATA/nodes-internet.json
@@ -30,10 +30,8 @@ cd "$(dirname "$0")"/
 cp $WORKDIR/$CMNTYDATA/nodes.json $WWWDIRINTERN/build/data/
 cp $WORKDIR/$CMNTYDATA/graph.json $WWWDIRINTERN/build/data/
 cp $WORKDIR/$CMNTYDATA/nodelist.json $WWWDIRINTERN/build/data/
-cp -r $WORKDIR/$CMNTYDATA/nodes $WWWDIRINTERN/build/data/
 
 # copy files to external map
 cp $WORKDIR/$CMNTYDATA/nodes-internet.json $WWWDIREXTERN/build/data/nodes.json
 cp $WORKDIR/$CMNTYDATA/graph.json $WWWDIREXTERN/build/data/
 cp $WORKDIR/$CMNTYDATA/nodelist.json $WWWDIREXTERN/build/data/
-cp -r $WORKDIR/$CMNTYDATA/nodes $WWWDIREXTERN/build/data/
