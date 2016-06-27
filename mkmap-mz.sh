@@ -5,8 +5,8 @@ set -e
 export PATH=/home/admin/bin:$PATH
 
 WORKDIR="/home/admin/clones/ffmap-backend"
-WWWDIRINTERN="/var/www/meshviewer-intern-mz"
-WWWDIREXTERN="/var/www/meshviewer-extern-mz"
+WWWDIRINTERN="/var/www/ffmz.org/map"
+WWWDIREXTERN="/var/www/freifunk-mainz.de/map"
 CMNTYDATA="mz-data"
 CMNTYRRD="mz-rrd"
 

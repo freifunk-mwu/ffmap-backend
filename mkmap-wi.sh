@@ -5,8 +5,8 @@ set -e
 export PATH=/home/admin/bin:$PATH
 
 WORKDIR="/home/admin/clones/ffmap-backend"
-WWWDIRINTERN="/var/www/meshviewer-intern-wi"
-WWWDIREXTERN="/var/www/meshviewer-extern-wi"
+WWWDIRINTERN="/var/www/ffwi.org/map"
+WWWDIREXTERN="/var/www/freifunk.net/map.wiesbaden"
 CMNTYDATA="wi-data"
 CMNTYRRD="wi-rrd"
 

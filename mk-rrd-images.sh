@@ -5,16 +5,16 @@ set -e
 export PATH=/home/admin/bin:$PATH
 
 WORKDIR="/home/admin/clones/ffmap-backend"
-MWUWWWDIRINTERN="/var/www/meshviewer-intern-mwu"
-MWUWWWDIREXTERN="/var/www/meshviewer-extern-mwu"
+MWUWWWDIRINTERN="/var/www/ffmwu.org/map"
+MWUWWWDIREXTERN="/var/www/freifunk-mwu.de/map"
 MWUCMNTYDATA="mwu-data"
 MWUCMNTYRRD="mwu-rrd"
-MZWWWDIRINTERN="/var/www/meshviewer-intern-mz"
-MZWWWDIREXTERN="/var/www/meshviewer-extern-mz"
+MZWWWDIRINTERN="/var/www/ffmz.org/map"
+MZWWWDIREXTERN="/var/www/freifunk-mainz.de/map"
 MZCMNTYDATA="mz-data"
 MZCMNTYRRD="mz-rrd"
-WIWWWDIRINTERN="/var/www/meshviewer-intern-wi"
-WIWWWDIREXTERN="/var/www/meshviewer-extern-wi"
+WIWWWDIRINTERN="/var/www/ffwi.org/map"
+WIWWWDIREXTERN="/var/www/freifunk.net/map.wiesbaden"
 WICMNTYDATA="wi-data"
 WICMNTYRRD="wi-rrd"
 
