@@ -39,8 +39,9 @@ class RRD(object):
                 if node['flags']['online']:
                     node_count += 1
                     client_count += node['statistics']['clients']
-                rrd = NodeRRD(os.path.join(self.dbPath, node['nodeinfo']['node_id'] + '.rrd'), node)
-                rrd.update()
+                if node['nodeinfo']['node_id'] is not None:
+                    rrd = NodeRRD(os.path.join(self.dbPath, node['nodeinfo']['node_id'] + '.rrd'), node)
+                    rrd.update()
             except KeyError:
                 pass
         self.globalDb.update(node_count, client_count)
