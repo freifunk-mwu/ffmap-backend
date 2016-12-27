@@ -21,7 +21,7 @@ fi
 cd "$(dirname "$0")"/
 
 # run map backend
-/usr/bin/python3 $WORKDIR/backend.py --with-rrd --rrd-path $CMNTYRRD --prune 45 -m wiBAT:/var/run/alfred-wi.sock --vpn 02:00:0a:38:00:17 02:00:0a:38:00:07 02:00:0a:38:00:d0 02:00:0a:38:00:e7 02:00:0a:38:00:2a 02:00:0a:38:00:a1 -d $WORKDIR/$CMNTYDATA/
+/usr/bin/python3 $WORKDIR/backend.py --with-rrd --rrd-path $CMNTYRRD --prune 45 -m wiBAT:/var/run/alfred-wi.sock --vpn 02:00:0a:38:00:17 02:00:0a:38:00:07 02:00:0a:38:00:d0 02:00:0a:38:00:e7 02:00:0a:38:00:a1 02:00:0a:38:00:17 02:00:0a:38:01:07 02:00:0a:38:01:d0 02:00:0a:38:01:e7 02:00:0a:38:01:a1 -d $WORKDIR/$CMNTYDATA/
 
 # remove contact info
 /usr/bin/jq '.nodes = (.nodes | map(del(.nodeinfo.owner)))' < $WORKDIR/$CMNTYDATA/nodes.json > $WORKDIR/$CMNTYDATA/nodes-internet.json
